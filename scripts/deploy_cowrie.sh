@@ -54,6 +54,7 @@ sed -i "s/#port = 10000/port = $HPF_PORT/g" cowrie.cfg
 sed -i "s/#identifier = abc123/identifier = $HPF_IDENT/g" cowrie.cfg
 sed -i "s/#secret = secret/secret = $HPF_SECRET/g" cowrie.cfg
 sed -i 's/#debug=false/debug=false/' cowrie.cfg
+sed -i 's/listen_endpoints = tcp:2222:interface=0.0.0.0/listen_endpoints = tcp:22:interface=0.0.0.0/g' cowrie.cfg
 
 chown -R cowrie:users /opt/cowrie/
 touch /etc/authbind/byport/22
